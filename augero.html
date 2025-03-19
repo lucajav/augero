@@ -70,54 +70,6 @@
             height: auto;
             margin-bottom: 10px;
         }
-        @media (min-width: 1024px) {
-            #selectedImageContainer {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                max-height: 90vh;
-                overflow: hidden;
-                padding: 20px;
-            }
-            #selectedImageContainer img {
-                max-height: 60vh;
-                max-width: 100%;
-            }
-            #selectedDescription {
-                max-height: 30vh;
-                overflow: auto;
-                text-align: center;
-                padding: 10px;
-                color: black;
-                background: white;
-                border-top: 1px solid #ccc;
-                width: 100%;
-            }
-            #selectedImageContainer {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                max-height: 90vh;
-                overflow: hidden;
-            }
-            #selectedImageContainer img {
-                max-height: 60vh;
-                max-width: 100%;
-            }
-            #selectedDescription {
-                max-height: 30vh;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            #selectedImageContainer img {
-                max-height: 90vh;
-            }
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 10px;
-        }
         .arrow {
             position: absolute;
             top: 50%;
@@ -141,35 +93,31 @@
 <body>
     <h1>La Bottega degli Augero</h1>
     <div class="container" id="galleryContainer"></div>
-    
+
     <div id="selectedImageContainer">
         <button class="arrow arrow-left" onclick="prevImage()">&#9664;</button>
         <img id="selectedImage" src="" alt="Immagine selezionata">
         <div id="selectedDescription"></div>
         <button class="arrow arrow-right" onclick="nextImage()">&#9654;</button>
     </div>
-    
+
     <script>
-        const artworks = [
-          {src: 'img/affreschi madonnina XIXsec 2 verolengo.jpg', title: 'Affreschi Madonnina', description: 'Verolengo (To)<br>Santuario della Madonnina<br><br>Amedeo e Francesco Augero<br>a sinistra ritratto presentazione di Gesù al Tempio<br>a destra assunzione di Maria S.S.<br>affreschi firmati e datati 1849<br><br>al centro bozzetto dell’affresco della Presentazione di Gesù al Tempio<br>Amedeo Augero<br>olio su tela XIX sec.'},
-          {src: 'img/affresco del salone consiliare 1860.jpg', title: 'Affresco del salone consiliare', description: 'Verolengo (To)<br>Ex Palazzo Municipale<br>Salone Consiliare<br><br>Amedeo Augero<br><br>Dipinto raffigurante l’attività della popolazione locale nel XIX secolo, Agricoltura, Commercio, Artigianato.<br><br>dipinto a olio su muro<br>firmato e datato<br>1860'},
-          {src: 'img/amedeo 1856 transito san giuseppe parrocchiale verolengo.jpg', title: 'Il Transito di San Giuseppe', description: 'Verolengo (To)<br>Parrocchia di San Giovanni Battista<br><br>Amedeo Augero<br><br>Dipinto raffigurante il Transito di San Giuseppe<br><br>olio su tela<br>200 x 140 cm<br>firmato e datato<br>1856'},
-          {src: 'img/amedeo augero san nicola seconda meta XIX sec.jpg', title: 'San Nicola di Bari', description: 'Verolengo (To) <br> Chiesa Parrocchiale di San Giovanni Battista<br><br> Amedeo Augero<br><br> dipinto raffigurante<br> San Nicola di Bari<br><br> olio su tela<br> seconda metà sec XIX'},
-          {src: 'img/amedeo pala trinita XIXsec verolengo.jpg', title: 'Trinità', description: 'Verolengo (To)<br> Confraternita della Trinità<br><br> Amedeo Augero<br><br> dipinto raffigurante la Trinità<br><br> olio su tela<br><br> cornice monumentale in cartapesta<br> probabile esecuzione di Gaspare Augero<br><br> firmato e datato 1856'},
-          {src: 'img/amedeo vie crucis XIX sec verolengo.jpg', title: 'Vie Crucis', description: 'Verolengo (To)<br><br> a sinistra Parrocchiale di San Giovanni Battista, nel centro Palazzo Comunale e a destra Santuario della Madonnina<br><br> Amedeo Augero<br><br> XIV stazione della Via Crucis<br><br>olio su tela XIX sec.'},
-          {src: 'img/francesco stendardo e mad  2 XIXsec verolengo.jpg', title: 'Madonna con Bambino', description: 'a destra Pont C.se<br> fr. Boetti<br><br> Francesco Augero<br> Madonna con Bambino<br> olio su tela sec. XIX<br><br> al centro il bozzetto<br> olio su tela XIX sec.<br> collezione Dente Liffredo<br><br> a sinistra Verolengo (To)<br> Confraternita di San Michele Arcangelo<br> stendardo processionale raffigurante Madonna con Bambino e San Michele Arcangelo<br> 1868'},
-          {src: 'img/ritratti di amedeo fatti da francesco XIXsec verolengo.jpg', title: 'Ritratti di Amedeo Augero', description: 'Francesco Augero<br><br> ritratti di Amedeo Augero<br><br> olio su tela<br> XIX sec.<br> collezione privata'},
-          {src: 'img/ritratti di francesco autoritratto XIXsec verolengo.jpg', title: 'Ritratti di Francesco Augero', description: 'Francesco Augero<br><br> Autoritratti collezione privata<br><br> olio su tela<br> XIX sec.'},
-       ];
+    const artworks = [
+      {src: 'img/affreschi madonnina XIXsec 2 verolengo.jpg', title: 'Affreschi Madonnina', description: 'Verolengo (To)<br>Santuario della Madonnina<br><br>Amedeo e Francesco Augero<br>a sinistra ritratto presentazione di Gesù al Tempio<br>a destra assunzione di Maria S.S.<br>affreschi firmati e datati 1849<br><br>al centro bozzetto dell’affresco della Presentazione di Gesù al Tempio<br>Amedeo Augero<br>olio su tela XIX sec.'},
+      {src: 'img/affresco del salone consiliare 1860.jpg', title: 'Affresco del salone consiliare', description: 'Verolengo (To)<br>Ex Palazzo Municipale<br>Salone Consiliare<br><br>Amedeo Augero<br><br>Dipinto raffigurante l’attività della popolazione locale nel XIX secolo, Agricoltura, Commercio, Artigianato.<br><br>dipinto a olio su muro<br>firmato e datato<br>1860'},
+      {src: 'img/amedeo 1856 transito san giuseppe parrocchiale verolengo.jpg', title: 'Il Transito di San Giuseppe', description: 'Verolengo (To)<br>Parrocchia di San Giovanni Battista<br><br>Amedeo Augero<br><br>Dipinto raffigurante il Transito di San Giuseppe<br><br>olio su tela<br>200 x 140 cm<br>firmato e datato<br>1856'},
+      {src: 'img/amedeo augero san nicola seconda meta XIX sec.jpg', title: 'San Nicola di Bari', description: 'Verolengo (To) <br> Chiesa Parrocchiale di San Giovanni Battista<br><br> Amedeo Augero<br><br> dipinto raffigurante<br> San Nicola di Bari<br><br> olio su tela<br> seconda metà sec XIX'},
+      {src: 'img/amedeo pala trinita XIXsec verolengo.jpg', title: 'Trinità', description: 'Verolengo (To)<br> Confraternita della Trinità<br><br> Amedeo Augero<br><br> dipinto raffigurante la Trinità<br><br> olio su tela<br><br> cornice monumentale in cartapesta<br> probabile esecuzione di Gaspare Augero<br><br> firmato e datato 1856'},
+        {src: 'img/amedeo vie crucis XIX sec verolengo.jpg', title: 'Vie Crucis', description: 'Verolengo (To)<br><br> a sinistra Parrocchiale di San Giovanni Battista, nel centro Palazzo Comunale e a destra Santuario della Madonnina<br><br> Amedeo Augero<br><br> XIV stazione della Via Crucis<br><br>olio su tela XIX sec.'},
+        {src: 'img/francesco stendardo e mad  2 XIXsec verolengo.jpg', title: 'Madonna con Bambino', description: 'a destra Pont C.se<br> fr. Boetti<br><br> Francesco Augero<br> Madonna con Bambino<br> olio su tela sec. XIX<br><br> al centro il bozzetto<br> olio su tela XIX sec.<br> collezione Dente Liffredo<br><br> a sinistra Verolengo (To)<br> Confraternita di San Michele Arcangelo<br> stendardo processionale raffigurante Madonna con Bambino e San Michele Arcangelo<br> 1868'},
+        {src: 'img/ritratti di amedeo fatti da francesco XIXsec verolengo.jpg', title: 'Ritratti di Amedeo Augero', description: 'Francesco Augero<br><br> ritratti di Amedeo Augero<br><br> olio su tela<br> XIX sec.<br> collezione privata'},
+        {src: 'img/ritratti di francesco autoritratto XIXsec verolengo.jpg', title: 'Ritratti di Francesco Augero', description: 'Francesco Augero<br><br> Autoritratti collezione privata<br><br> olio su tela<br> XIX sec.'},
+        {src: 'img/statue madonnina amedeo- francesco-gaspare 1859.jpg', title: 'Statua S. Giuseppe e Bambino Gesù', description: 'Verolengo (To)<br> Santuario della Madonnina<br><br> Amedeo Augero<br> Francesco Augero<br> Gaspare Augero<br><br> statua raffigurante San Giuseppe e il Bambino Gesù<br><br> Una delle quattro statue del Santuario.<br> Le altre statue raffigurano:<br> S.Anna e San Giovanni Battista<br><br> Tutoli di granturco rivestiti in laterizio e rifiniti in gesso<br><br>1859'},
+        {src: 'img/statue mose.jpg', title: 'Statua Mosè', description: 'Verolengo (To)<br> Santuario della Madonnina<br><br> Amedeo Augero<br> Francesco Augero<br> Gaspare Augero<br><br> Statua raffigurante il Mosè con le tavole della legge Una delle quattro statue del Santuario.<br> Le altre statue raffigurano:<br> S.Anna e San Giovanni Battista<br><br> Tutoli di granturco rivestiti in laterizio e rifiniti in gesso<br><br> 1859'}
+      ];
         let currentIndex = 0;
 
         function showImage(index) {
-    currentIndex = index;
-    document.getElementById('selectedImage').src = artworks[index].src;
-    document.getElementById('selectedDescription').innerHTML = artworks[index].description;
-    document.getElementById('selectedImageContainer').style.display = 'block';
-    document.getElementById('selectedImageContainer').scrollIntoView({ behavior: 'smooth' });
-    history.pushState(null, '', '?index=' + index);
     currentIndex = index;
     document.getElementById('selectedImage').src = artworks[index].src;
     document.getElementById('selectedDescription').innerHTML = artworks[index].description;
@@ -180,13 +128,13 @@
             document.getElementById('selectedDescription').innerHTML = artworks[index].description;
             document.getElementById('selectedImageContainer').style.display = 'block';
         }
-        
+
         function prevImage() {
             if (currentIndex > 0) {
                 showImage(currentIndex - 1);
             }
         }
-        
+
         function nextImage() {
             if (currentIndex < artworks.length - 1) {
                 showImage(currentIndex + 1);
@@ -203,27 +151,8 @@
                 container.appendChild(item);
             });
         }
-        
+
         renderGallery();
-    // Controlla se c'è un parametro 'index' nell'URL e mostra l'immagine corrispondente
-        window.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const index = urlParams.get('index');
-            if (index !== null && !isNaN(index) && index >= 0 && index < artworks.length) {
-                showImage(parseInt(index));
-            }
-        });
-            const urlParams = new URLSearchParams(window.location.search);
-            const index = urlParams.get('index');
-            if (index !== null && !isNaN(index) && index >= 0 && index < artworks.length) {
-                setTimeout(() => showImage(parseInt(index)), 500);
-            }
-            const urlParams = new URLSearchParams(window.location.search);
-            const index = urlParams.get('index');
-            if (index !== null && !isNaN(index) && index >= 0 && index < artworks.length) {
-                showImage(parseInt(index));
-            }
-        };
     </script>
 </body>
 </html>
