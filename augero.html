@@ -138,10 +138,18 @@
                 document.getElementById('selectedDescription').innerHTML = artworks[index].description;
                 document.getElementById('selectedImageContainer').style.display = 'block';
 
-                // Delay scrolling for better compatibility
+                // Delay the scroll for mobile rendering
                 setTimeout(() => {
-                    document.getElementById('selectedImageContainer').scrollIntoView({behavior: 'smooth'});
-                }, 300); // 300ms usually works well
+                    const targetElement = document.getElementById('selectedImageContainer');
+                    const topbarHeight = document.querySelector('h1').offsetHeight; // Get the height of the sticky topbar
+
+                    const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - topbarHeight - 10; // 10px extra padding
+
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }, 300); // Delay for smoother rendering on mobile
             }
 
             function prevImage() {
