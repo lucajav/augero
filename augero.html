@@ -122,11 +122,11 @@
                 document.getElementById('selectedImage').src = artworks[index].src;
                 document.getElementById('selectedDescription').innerHTML = artworks[index].description;
                 document.getElementById('selectedImageContainer').style.display = 'block';
-                document.getElementById('selectedImageContainer').scrollIntoView({behavior: 'smooth'});
-                currentIndex = index;
-                document.getElementById('selectedImage').src = artworks[index].src;
-                document.getElementById('selectedDescription').innerHTML = artworks[index].description;
-                document.getElementById('selectedImageContainer').style.display = 'block';
+
+                // Delay scrolling for better compatibility
+                setTimeout(() => {
+                    document.getElementById('selectedImageContainer').scrollIntoView({behavior: 'smooth'});
+                }, 300); // 300ms usually works well
             }
 
             function prevImage() {
@@ -162,10 +162,6 @@
                 const imgIndex = parseInt(getQueryParam('img'));
                 if (!isNaN(imgIndex) && imgIndex >= 0 && imgIndex < artworks.length) {
                     showImage(imgIndex);
-                    window.scrollTo({
-                        top: document.body.scrollHeight,
-                        behavior: 'smooth'
-                    });
                 }
             };
         </script>
