@@ -12,20 +12,29 @@
                 margin: 0;
                 padding: 20px;
             }
+
             h1 {
                 text-align: center;
                 font-family: "Georgia", serif;
                 font-style: italic;
                 font-size: 24px;
-                color: white;
-                margin-bottom: 20px;
-                background-color: #601313; /* Background for topbar */
+                background-color: #601313; /* Dark red topbar background */
                 padding: 15px;
                 margin: 0; /* Remove default margin */
                 position: sticky;
                 top: 0;
                 z-index: 1000;
             }
+            #topbar-link {
+                text-decoration: none;  /* No underline */
+                color: white;           /* White text */
+                cursor: pointer;        /* Pointer on hover */
+            }
+            #topbar-link:hover {
+                text-decoration: none;  /* No underline on hover */
+                color: white;           /* Stay white on hover */
+            }
+
             .container {
                 max-width: 500px;
                 margin: auto;
