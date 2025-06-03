@@ -152,10 +152,18 @@
                 });
             }
 
-            window.onload = function() {
-    renderGallery();
-    showImage(2); // Automatically show the third image
-};
+            function getQueryParam(param) {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(param);
+            }
+
+            window.onload = function () {
+                renderGallery();
+                const imgIndex = parseInt(getQueryParam('img'));
+                if (!isNaN(imgIndex) && imgIndex >= 0 && imgIndex < artworks.length) {
+                    showImage(imgIndex);
+                }
+            };
         </script>
     </body>
 </html>
