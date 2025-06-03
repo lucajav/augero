@@ -162,6 +162,10 @@
                 const imgIndex = parseInt(getQueryParam('img'));
                 if (!isNaN(imgIndex) && imgIndex >= 0 && imgIndex < artworks.length) {
                     showImage(imgIndex);
+                    window.scrollTo({
+                        top: document.body.scrollHeight,
+                        behavior: 'smooth'
+                    });
                 }
             };
         </script>
