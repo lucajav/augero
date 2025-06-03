@@ -152,7 +152,10 @@
                 });
             }
 
-            renderGallery();
+            window.onload = function() {
+    renderGallery();
+    showImage(2); // Automatically show the third image
+};
         </script>
     </body>
 </html>
