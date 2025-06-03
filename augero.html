@@ -19,6 +19,12 @@
                 font-size: 24px;
                 color: white;
                 margin-bottom: 20px;
+                background-color: #601313; /* Background for topbar */
+                padding: 15px;
+                margin: 0; /* Remove default margin */
+                position: sticky;
+                top: 0;
+                z-index: 1000;
             }
             .container {
                 max-width: 500px;
@@ -91,7 +97,7 @@
         </style>
     </head>
     <body>
-        <h1>La Bottega degli Augero</h1>
+        <h1><a href="index.html" id="topbar-link">La Bottega degli Augero</a></h1>
         <div class="container" id="galleryContainer"></div>
 
         <div id="selectedImageContainer">
