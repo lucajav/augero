@@ -105,10 +105,40 @@
             .arrow-right {
                 right: 10px;
             }
+
+
+
+            #presentation-link-container {
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            #presentation-link {
+                display: inline-block;
+                background-color: #f8f1e5;
+                color: #601313;
+                text-decoration: none;
+                padding: 10px 20px;
+                font-weight: bold;
+                border-radius: 20px;
+                border: 2px solid #601313;
+                transition: background-color 0.3s, color 0.3s;
+            }
+
+            #presentation-link:hover {
+                background-color: #601313;
+                color: #f8f1e5;
+            }
+
         </style>
     </head>
     <body>
         <h1><a href="index.html" id="topbar-link">La Bottega degli Augero</a></h1>
+
+        <div id="presentation-link-container">
+            <a href="presentazione.html" id="presentation-link">Presentazione della mostra</a>
+        </div>
+
         <div class="container" id="galleryContainer"></div>
 
         <div id="selectedImageContainer">
