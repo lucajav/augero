@@ -156,11 +156,20 @@
 
         <script>
             const artworks = [
-                {src: 'img/affreschi madonnina XIXsec 2 verolengo.jpg', title: 'Affreschi Madonnina', description: 'Verolengo (To)<br>Santuario della Madonnina<br><br>Amedeo e Francesco Augero<br>a sinistra ritratto presentazione di Gesù al Tempio<br>a destra assunzione di Maria S.S.<br>affreschi firmati e datati 1849<br><br>al centro bozzetto dell’affresco della Presentazione di Gesù al Tempio<br>Amedeo Augero<br>olio su tela XIX sec.'},
-                {src: 'img/affresco del salone consiliare 1860.jpg', title: 'Affresco del salone consiliare', description: 'Verolengo (To)<br>Ex Palazzo Municipale<br>Salone Consiliare<br><br>Amedeo Augero<br><br>Dipinto raffigurante l’attività della popolazione locale nel XIX secolo, Agricoltura, Commercio, Artigianato.<br><br>dipinto a olio su muro<br>firmato e datato<br>1860'},
-                {src: 'img/amedeo 1856 transito san giuseppe parrocchiale verolengo.jpg', title: 'Il Transito di San Giuseppe', description: 'Verolengo (To)<br>Parrocchia di San Giovanni Battista<br><br>Amedeo Augero<br><br>Dipinto raffigurante il Transito di San Giuseppe<br><br>olio su tela<br>200 x 140 cm<br>firmato e datato<br>1856'},
-                {src: 'img/amedeo augero san nicola seconda meta XIX sec.jpg', title: 'San Nicola di Bari', description: 'Verolengo (To) <br> Chiesa Parrocchiale di San Giovanni Battista<br><br> Amedeo Augero<br><br> dipinto raffigurante<br> San Nicola di Bari<br><br> olio su tela<br> seconda metà sec XIX'},
-                {src: 'img/amedeo pala trinita XIXsec verolengo.jpg', title: 'Trinità',
+                {
+                    src: 'img/affreschi madonnina XIXsec 2 verolengo.jpg', title: 'Affreschi Madonnina', description: 'Verolengo (To)<br>Santuario della Madonnina<br><br>Amedeo e Francesco Augero<br>a sinistra ritratto presentazione di Gesù al Tempio<br>a destra assunzione di Maria S.S.<br>affreschi firmati e datati 1849<br><br>al centro bozzetto dell’affresco della Presentazione di Gesù al Tempio<br>Amedeo Augero<br>olio su tela XIX sec.'
+                },
+                {
+                    src: 'img/affresco del salone consiliare 1860.jpg', title: 'Affresco del salone consiliare', description: 'Verolengo (To)<br>Ex Palazzo Municipale<br>Salone Consiliare<br><br>Amedeo Augero<br><br>Dipinto raffigurante l’attività della popolazione locale nel XIX secolo, Agricoltura, Commercio, Artigianato.<br><br>dipinto a olio su muro<br>firmato e datato<br>1860'
+                },
+                {
+                    src: 'img/amedeo 1856 transito san giuseppe parrocchiale verolengo.jpg', title: 'Il Transito di San Giuseppe', description: 'Verolengo (To)<br>Parrocchia di San Giovanni Battista<br><br>Amedeo Augero<br><br>Dipinto raffigurante il Transito di San Giuseppe<br><br>olio su tela<br>200 x 140 cm<br>firmato e datato<br>1856'
+                },
+                {
+                    src: 'img/amedeo augero san nicola seconda meta XIX sec.jpg', title: 'San Nicola di Bari', description: 'Verolengo (To) <br> Chiesa Parrocchiale di San Giovanni Battista<br><br> Amedeo Augero<br><br> dipinto raffigurante<br> San Nicola di Bari<br><br> olio su tela<br> seconda metà sec XIX'
+                },
+                {
+                    src: 'img/amedeo pala trinita XIXsec verolengo.jpg', title: 'Trinità',
                     audio: 'audio/trinita.mp3',
                     description: 'Verolengo (To)<br> Confraternita della Trinità<br><br> Amedeo Augero<br><br> dipinto raffigurante la Trinità<br><br> olio su tela<br><br> cornice monumentale in cartapesta<br> probabile esecuzione di Gaspare Augero<br><br> firmato e datato 1856',
                     details: `L'opera è collocata nell'abside della chiesa della Confraternita della Santissima Trinità di Verolengo.<br>
@@ -178,27 +187,45 @@ Gli angeli sono stati realizzati in cartapesta e gesso, con finitura dorata.<br>
 Il drappo è realizzato con un robusto tessuto di canapa ricadente a formare morbide pieghe, ricoperto accuratamente di stucco, dipinto di blu e rifinito con applicazione d'argento e d'oro in foglia.<br>
 Sul drappo si stagliano le stelle, definite da una linea incisa, e trattate con vernice mecca per intonarle all'oro.<br>
 Il bordo dorato del drappo è dipinto con un profilo rosso che disegna un motivo di fiori ricorrenti.<br>
-La corona sommitale e la cornice ovale intorno alla tela sono elementi lignei rivestiti di foglia d’oro.`},
-
-                {src: 'img/amedeo vie crucis XIX sec verolengo.jpg', title: 'Vie Crucis', description: 'Verolengo (To)<br><br> a sinistra Parrocchiale di San Giovanni Battista, nel centro Palazzo Comunale e a destra Santuario della Madonnina<br><br> Amedeo Augero<br><br> XIV stazione della Via Crucis<br><br>olio su tela XIX sec.'},
-                {src: 'img/francesco stendardo e mad  2 XIXsec verolengo.jpg', title: 'Madonna con Bambino', description: 'a destra Pont C.se<br> fr. Boetti<br><br> Francesco Augero<br> Madonna con Bambino<br> olio su tela sec. XIX<br><br> al centro il bozzetto<br> olio su tela XIX sec.<br> collezione Dente Liffredo<br><br> a sinistra Verolengo (To)<br> Confraternita di San Michele Arcangelo<br> stendardo processionale raffigurante Madonna con Bambino e San Michele Arcangelo<br> 1868'},
-                {src: 'img/ritratti di amedeo fatti da francesco XIXsec verolengo.jpg', title: 'Ritratti di Amedeo Augero', description: 'Francesco Augero<br><br> ritratti di Amedeo Augero<br><br> olio su tela<br> XIX sec.<br> collezione privata'},
-                {src: 'img/ritratti di francesco autoritratto XIXsec verolengo.jpg', title: 'Ritratti di Francesco Augero', description: 'Francesco Augero<br><br> Autoritratti collezione privata<br><br> olio su tela<br> XIX sec.'},
-                {src: 'img/statue madonnina amedeo- francesco-gaspare 1859.jpg', title: 'Statua S. Giuseppe e Bambino Gesù', description: 'Verolengo (To)<br> Santuario della Madonnina<br><br> Amedeo Augero<br> Francesco Augero<br> Gaspare Augero<br><br> statua raffigurante San Giuseppe e il Bambino Gesù<br><br> Una delle quattro statue del Santuario.<br> Le altre statue raffigurano:<br> S.Anna e San Giovanni Battista<br><br> Tutoli di granturco rivestiti in laterizio e rifiniti in gesso<br><br>1859'},
-                {src: 'img/statue mose.jpg', title: 'Statua Mosè', description: 'Verolengo (To)<br> Santuario della Madonnina<br><br> Amedeo Augero<br> Francesco Augero<br> Gaspare Augero<br><br> Statua raffigurante il Mosè con le tavole della legge Una delle quattro statue del Santuario.<br> Le altre statue raffigurano:<br> S.Anna e San Giovanni Battista<br><br> Tutoli di granturco rivestiti in laterizio e rifiniti in gesso<br><br> 1859'}
+La corona sommitale e la cornice ovale intorno alla tela sono elementi lignei rivestiti di foglia d’oro.`
+                },
+                {
+                    src: 'img/santisidoro.jpg', title: 'Sant’Isidoro',
+                    audio: 'audio/santisidoro.mp3',
+                    description: 'Verolengo (To) <br> Chiesa Parrocchiale di San Giovanni Battista<br><br> Amedeo Augero<br><br> dipinto raffigurante<br> Sant’Isidoro<br><br> olio su tela<br> 1855?',
+                    details: `Nella navata destra è custodito un prezioso dipinto, realizzato ad olio su tela, firmato da Amedeo Augero (1855?).<br>
+Rappresenta <b>Sant’Isidoro</b>, protettore dei contadini, dei campi e dei raccolti, ritratto in suggestivo raccoglimento, mentre prega in campagna inginocchiato accanto agli attrezzi dei campi: pala, falce, roncola.<br>
+Sullo sfondo i buoi arano il campo condotti da un angelo.<br>
+La rappresentazione, ambientata nelle prime ore della mattina o già serali, offre lo spunto per l'illuminazione delle figure del Santo e dell'angelo che emergono da uno sfondo dai toni scuri.<br>
+La cornice lignea, di bottega Augero, presenta una modanatura dorata e, sul profilo esterno, è rifinita con un filetto scolpito con un motivo ad ovuli.`
+                },
+                {
+                    src: 'img/amedeo vie crucis XIX sec verolengo.jpg', title: 'Vie Crucis', description: 'Verolengo (To)<br><br> a sinistra Parrocchiale di San Giovanni Battista, nel centro Palazzo Comunale e a destra Santuario della Madonnina<br><br> Amedeo Augero<br><br> XIV stazione della Via Crucis<br><br>olio su tela XIX sec.'
+                },
+                {
+                    src: 'img/francesco stendardo e mad  2 XIXsec verolengo.jpg', title: 'Madonna con Bambino', description: 'a destra Pont C.se<br> fr. Boetti<br><br> Francesco Augero<br> Madonna con Bambino<br> olio su tela sec. XIX<br><br> al centro il bozzetto<br> olio su tela XIX sec.<br> collezione Dente Liffredo<br><br> a sinistra Verolengo (To)<br> Confraternita di San Michele Arcangelo<br> stendardo processionale raffigurante Madonna con Bambino e San Michele Arcangelo<br> 1868'
+                },
+                {
+                    src: 'img/ritratti di amedeo fatti da francesco XIXsec verolengo.jpg', title: 'Ritratti di Amedeo Augero', description: 'Francesco Augero<br><br> ritratti di Amedeo Augero<br><br> olio su tela<br> XIX sec.<br> collezione privata'
+                },
+                {
+                    src: 'img/ritratti di francesco autoritratto XIXsec verolengo.jpg', title: 'Ritratti di Francesco Augero', description: 'Francesco Augero<br><br> Autoritratti collezione privata<br><br> olio su tela<br> XIX sec.'
+                },
+                {
+                    src: 'img/statue madonnina amedeo- francesco-gaspare 1859.jpg', title: 'Statua S. Giuseppe e Bambino Gesù', description: 'Verolengo (To)<br> Santuario della Madonnina<br><br> Amedeo Augero<br> Francesco Augero<br> Gaspare Augero<br><br> statua raffigurante San Giuseppe e il Bambino Gesù<br><br> Una delle quattro statue del Santuario.<br> Le altre statue raffigurano:<br> S.Anna e San Giovanni Battista<br><br> Tutoli di granturco rivestiti in laterizio e rifiniti in gesso<br><br>1859'
+                },
+                {
+                    src: 'img/statue mose.jpg', title: 'Statua Mosè', description: 'Verolengo (To)<br> Santuario della Madonnina<br><br> Amedeo Augero<br> Francesco Augero<br> Gaspare Augero<br><br> Statua raffigurante il Mosè con le tavole della legge Una delle quattro statue del Santuario.<br> Le altre statue raffigurano:<br> S.Anna e San Giovanni Battista<br><br> Tutoli di granturco rivestiti in laterizio e rifiniti in gesso<br><br> 1859'
+                }
             ];
             let currentIndex = 0;
-
             function showImage(index) {
                 currentIndex = index;
                 document.getElementById('selectedImage').src = artworks[index].src;
-
                 const descriptionContainer = document.getElementById('selectedDescription');
                 const detailsContainer = document.getElementById('selectedDetails');
-
                 // Pulisce il contenuto precedente
                 descriptionContainer.innerHTML = '';
-
                 // Se c'è un audio, aggiungi prima il titolo e il player
                 if (artworks[index].audio) {
                     // Titolo Audio Guida
@@ -209,21 +236,17 @@ La corona sommitale e la cornice ovale intorno alla tela sono elementi lignei ri
                     audioTitle.style.marginTop = '10px';
                     audioTitle.style.fontSize = '18px';
                     audioTitle.style.color = '#601313';
-
                     // Player Audio
                     const audioPlayer = document.createElement('audio');
                     audioPlayer.controls = true;
                     audioPlayer.autoplay = false; // Autoplay disattivato
                     audioPlayer.style.marginBottom = '15px';
                     audioPlayer.style.width = '100%';
-
                     const sourceMp3 = document.createElement('source');
                     sourceMp3.src = artworks[index].audio;
                     sourceMp3.type = 'audio/mpeg';
-
                     audioPlayer.appendChild(sourceMp3);
                     audioPlayer.innerHTML += "Your browser does not support the audio element.";
-
                     // Aggiungi titolo e player sopra la descrizione
                     descriptionContainer.appendChild(audioTitle);
                     descriptionContainer.appendChild(audioPlayer);
@@ -233,19 +256,15 @@ La corona sommitale e la cornice ovale intorno alla tela sono elementi lignei ri
                 const descriptionText = document.createElement('div');
                 descriptionText.innerHTML = artworks[index].description;
                 descriptionContainer.appendChild(descriptionText);
-
                 // Aggiorna i dettagli (se esistono)
                 detailsContainer.innerHTML = artworks[index].details || '';
-
                 // Mostra il contenitore
                 document.getElementById('selectedImageContainer').style.display = 'block';
-
                 // Scroll morbido per mobile
                 setTimeout(() => {
                     const targetElement = document.getElementById('selectedImageContainer');
                     const topbarHeight = document.querySelector('h1').offsetHeight;
                     const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - topbarHeight - 10;
-
                     window.scrollTo({
                         top: targetPosition,
                         behavior: 'smooth'
