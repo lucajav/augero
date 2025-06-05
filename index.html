@@ -65,23 +65,33 @@
                 height: auto;
                 margin-bottom: 10px;
             }
+
             .arrow {
-                position: absolute;
+                position: absolute; /* Adesso relativo al #imageWrapper */
                 top: 50%;
                 transform: translateY(-50%);
                 font-size: 24px;
-                color: rgba(255, 255, 255, 0.6);
-                background: rgba(0, 0, 0, 0.3);
+                color: rgba(255, 255, 255, 0.8); /* Più visibili */
+                background: rgba(0, 0, 0, 0.4);
                 border: none;
-                padding: 10px;
+                padding: 12px;
                 cursor: pointer;
                 border-radius: 50%;
+                z-index: 10;
+                transition: background 0.3s, transform 0.3s;
             }
+
             .arrow-left {
                 left: 10px;
             }
+
             .arrow-right {
                 right: 10px;
+            }
+
+            .arrow:hover {
+                background: rgba(0, 0, 0, 0.7);
+                transform: translateY(-50%) scale(1.1);
             }
 
 
@@ -133,13 +143,16 @@
         <div class="container" id="galleryContainer"></div>
 
         <div id="selectedImageContainer">
-            <button class="arrow arrow-left" onclick="prevImage()">&#9664;</button>
-            <img id="selectedImage" src="" alt="Immagine selezionata">
+            <div id="imageWrapper" style="position: relative;">
+                <button class="arrow arrow-left" onclick="prevImage()">&#9664;</button>
+                <img id="selectedImage" src="" alt="Immagine selezionata">
+                <button class="arrow arrow-right" onclick="nextImage()">&#9654;</button>
+            </div>
             <div id="selectedDescription"></div>
             <br/>
             <div id="selectedDetails"></div>
-            <button class="arrow arrow-right" onclick="nextImage()">&#9654;</button>
         </div>
+
 
         <script>
             const artworks = [
