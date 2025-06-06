@@ -319,7 +319,8 @@ Dalle indagini stratigrafiche eseguite sulle statue, esse risultano essere state
                     audioTitle.style.color = '#601313';
                     // Player Audio
                     const audioPlayer = document.createElement('audio');
-                    audioPlayer.controls = true;
+                    audioPlayer.setAttribute('controls', 'true');
+                    audioPlayer.setAttribute('controlsList', 'nodownload');  // <- This prevents download option
                     audioPlayer.autoplay = false; // Autoplay disattivato
                     audioPlayer.style.marginBottom = '15px';
                     audioPlayer.style.width = '100%';
